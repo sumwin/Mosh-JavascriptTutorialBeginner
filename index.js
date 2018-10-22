@@ -200,3 +200,24 @@
 // }
 
 //TODO: Exercise - Demerit Points
+//speed Limit =70
+//5  -> 1 point
+//Math.floor(1.3)
+//12 points -> suspended
+checkSpeed(50);
+
+function checkSpeed(speed) {
+    if (speed <= 70)
+        console.log('Is ok');
+    else if ((speed >= 71) && (speed <= 75))
+        console.log('1 point');
+        else if ((speed >= 76) && (speed <= 80))
+        console.log('2 point');
+        else if ((speed >= 81) && (speed <= 90))
+        console.log('3 point');
+        else if ((speed >= 91) && (speed <= 95))
+        console.log('4 point');
+        else if ((speed >= 9) && (speed <= 75))
+        console.log('1 point');
+    else if (speed  )
+}
