@@ -65,7 +65,7 @@
 
 // console.log(a);
 // console.log(b);
- 
+
 // let temp = a;
 // a = b;
 // b = temp;
@@ -86,7 +86,7 @@
 //     console.log('Good afternoon');    
 // else
 //     console.log('Evening');
- 
+
 //NOTE: Switch Case
 // let role = 'guest';
 
@@ -107,7 +107,7 @@
 //     console.log('Moderator');
 // else
 //     console.log('Unknow');
-    
+
 //NOTE: FOR Loop
 
 // for ( let i =5; i >= 1;i--){
@@ -166,7 +166,7 @@
 // function maximumNumber(num1, num2) {
 //     // if ( num1 > num2)
 //     //     return num1
-    
+
 //     // return num2
 //    return (num1 > num2) ? num1 : num2;
 // }
@@ -204,20 +204,139 @@
 //5  -> 1 point
 //Math.floor(1.3)
 //12 points -> suspended
-checkSpeed(50);
+// checkSpeed(130);
 
-function checkSpeed(speed) {
-    if (speed <= 70)
-        console.log('Is ok');
-    else if ((speed >= 71) && (speed <= 75))
-        console.log('1 point');
-        else if ((speed >= 76) && (speed <= 80))
-        console.log('2 point');
-        else if ((speed >= 81) && (speed <= 90))
-        console.log('3 point');
-        else if ((speed >= 91) && (speed <= 95))
-        console.log('4 point');
-        else if ((speed >= 9) && (speed <= 75))
-        console.log('1 point');
-    else if (speed  )
+// function checkSpeed(speed) {
+
+//NOTE: My Own COde
+// if (speed <= 75)
+//     console.log('Ok');
+// else if (speed >= 76 && speed <= 79)
+//     console.log('1 point');
+// else if (speed >= 80 && speed <= 84)
+//     console.log('2 point');
+// else if (speed >= 85 && speed <= 89)
+//     console.log('3 point');
+// else if (speed >= 90 && speed <= 94)
+//     console.log('4 point');
+// else if (speed >= 95 && speed <= 99)
+//     console.log('5 point');
+// else if (speed >= 100 && speed <= 104)
+//     console.log('6 point');
+// else if (speed >= 105 && speed <= 109)
+//     console.log('7 point');
+// else if (speed >= 110 && speed <= 114)
+//     console.log('8 point');
+// else if (speed >= 115 && speed <= 119)
+//     console.log('9 point');
+// else if (speed >= 120 && speed <= 124)
+//     console.log('10 point');
+// else if (speed >= 125 && speed <= 129)
+//     console.log('11 point');
+// else if (speed >= 130)
+//     console.log('License suspended');
+
+//     const speedLimit = 70;
+//     const kmPerPoint = 5;
+
+//     if (speed < speedLimit + kmPerPoint) {
+//         console.log('ok');
+//         return;
+//     }
+//     const points = Math.floor((speed - speedLimit) / kmPerPoint);
+//     if (points >= 12)
+//         console.log('License Suspended');
+//     else
+//         console.log('Points', points);
+
+// }
+
+//TODO: Execise 5 - Even and Odd Numbers
+
+// showNumbers(10);
+
+// function showNumbers(limit) {
+//     for (let i = 0; i < limit; i++) {
+//         let message = (i % 2 === 0) ? 'EVEN' : 'ODD'
+//         console.log(i, message);
+//     }
+// }
+
+//TODO: Execise 6 - Count Truthy
+
+// function countTruthy(array) {
+//     let count = 0;
+//     for (let value of array) {
+//         if (value)
+//             count++;
+//         return count;
+//     }
+// }
+
+//TODO: Exercise 7 - string properties
+
+// const movie = {
+//     title: 'a',
+//     releaseYear: 2018,
+//     rating: 4.5,
+//     director: 'b'
+// };
+
+// showProperties(movie);
+
+// function showProperties(obj) {
+//     for (let key in obj)
+//         if (typeof (obj[key]) === 'string')
+//             console.log(key, obj[key]);
+// }
+
+//TODO: Exercise 8 - Sum of Multiples of 3 and 5
+// console.log(sum(10));
+
+// function sum(limit) {
+//     let sum = 0;
+
+//     for (let i = 0; i <= limit; i++)
+//         if (i % 3 === 0 || i % 5 === 0)
+//             sum += i;
+
+//     return sum;
+// }
+
+//TODO: Exervise 9 - Grade
+
+//Average = 70
+
+// 1-59: F
+//60-69: D
+
+// const array = [80, 80, 1];
+// console.log(calculateGrade(array));
+
+// function calculateGrade(marks) {
+//     const averageScore = calculateAverage(marks)
+//     // console.log('Average Score : ' + averageScore);
+
+//     if (averageScore < 60) return 'F';
+//     if (averageScore < 70) return 'D';
+//     if (averageScore < 80) return 'C';
+//     if (averageScore < 90) return 'B';
+//     return 'A'
+// }
+
+// function calculateAverage(array) {
+//     let sum = 0;
+//     for (let mark of array) {
+//         sum += mark;
+//     }
+//     return sum / array.length;
+// )
+
+//TODO: Exercise 10 - Stars
+
+showStars(5)
+
+function showStars(rows) {
+
+
 }
