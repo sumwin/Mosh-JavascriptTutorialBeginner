@@ -368,9 +368,7 @@
 
 //Object-Programming (OOP)
 
-
-
-//Factory Function
+Factory Function
 function createCircle(radius, location) {
     return {
         radius,
@@ -380,8 +378,20 @@ function createCircle(radius, location) {
     };
 }
 
-const circle1 = createCircle(1);
-console.log(circle1);
+const myCircle = createCircle(1);
+// const circle1 = createCircle(1);
+// console.log(circle1);
 
-const circle2 = createCircle(2);
-console.log(circle2);
+// const circle2 = createCircle(2);
+// console.log(circle2);
+
+//Construction Function
+//Using Pascal Notation to declare Constructor Function
+function Circle(radius){
+    this.radius = radius;
+    this.draw = function(){
+        console.log('draw');
+    }
+}
+
+const circle = new Circle(1);
