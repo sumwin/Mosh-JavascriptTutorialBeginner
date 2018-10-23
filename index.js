@@ -334,9 +334,50 @@
 
 //TODO: Exercise 10 - Stars
 
-showStars(5)
+// showStars(12)
 
-function showStars(rows) {
+// function showStars(rows) {
+    
+//     const star = '*';
 
+//     for (let i = 1; i <= rows; i++) {
+//          console.log(star.repeat(i));     
+//             }
+    
 
-}
+// }
+
+//TODO: Exercise 11 - Primes No
+
+// showPrimes(10);
+
+// function showPrimes(limit) {
+//     for (let number = 2; number<= limit; number++)
+//         if (isPrime(number)) console.log(number);   
+// }
+
+// function isPrime(number) {
+//     for (let factor = 2; factor <= number; factor++)
+//         if (number % factor === 0)
+//             return false;
+            
+//     return true;
+// }
+
+//NOTE: Object:
+
+//Object-Programming (OOP)
+
+const circle = {
+    radius: 1,
+    location:{
+        x: 1,
+        y: 1
+    },
+    isVisible: true,
+    draw: function(){
+        console.log('draw');        
+    }
+};
+
+circle.draw();  //Method
