@@ -491,3 +491,46 @@
 
 // function areSame(address1, address2) {}
 //TODO: Exercise 4- Blog Post Object
+
+
+//NOTE: Adding Elements
+
+// const numbers = [3,4];
+// numbers.push(5,6);
+
+// console.log(numbers);
+
+// numbers.unshift(1,2);
+
+// console.log(numbers);
+
+// numbers.splice(2,0,'a','b');
+// console.log(numbers);
+
+//NOTE: Finding Elements (Primitives)
+// const numbers=[1,2,3,1,4];
+
+// console.log(numbers.indexOf(1,2));
+// console.log(numbers.lastIndexOf(1));
+// console.log(numbers.indexOf(1)!== -1);
+// console.log(numbers.includes(1));
+
+// NOTE: Finding Elements (References Type)
+
+// const courses = [
+//         {id: 1, name: 'a'},
+//         {id: 2, name: 'b'},
+// ];
+
+// // console.log(courses.includes({id:1, name:'a'}));
+// const course = courses.find(course =>course.name === 'a');
+
+
+// console.log(course);
+
+// NOTE: Removing Elements
+const numbers =[1,2,3,4,5];
+
+const last = numbers.pop();
+
+const first = numbers.shift;
