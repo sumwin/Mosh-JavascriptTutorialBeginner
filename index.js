@@ -20,7 +20,6 @@
 // let eligibleForLoan = highIncome || goodCreditScore;
 // console.log(eligibleForLoan);
 
-
 //NOTE: NOT (!)
 // let highIncome = false;
 // let goodCreditScore = false;
@@ -79,11 +78,10 @@
 //Otherwise: good evening
 // let hour = 22;
 
-
-// if (hour >= 6 && hour < 12) 
+// if (hour >= 6 && hour < 12)
 //     console.log('Good Morning');
-// else if (hour > 12 && hour < 18) 
-//     console.log('Good afternoon');    
+// else if (hour > 12 && hour < 18)
+//     console.log('Good afternoon');
 // else
 //     console.log('Evening');
 
@@ -337,13 +335,12 @@
 // showStars(12)
 
 // function showStars(rows) {
-    
+
 //     const star = '*';
 
 //     for (let i = 1; i <= rows; i++) {
-//          console.log(star.repeat(i));     
+//          console.log(star.repeat(i));
 //             }
-    
 
 // }
 
@@ -353,14 +350,14 @@
 
 // function showPrimes(limit) {
 //     for (let number = 2; number<= limit; number++)
-//         if (isPrime(number)) console.log(number);   
+//         if (isPrime(number)) console.log(number);
 // }
 
 // function isPrime(number) {
 //     for (let factor = 2; factor <= number; factor++)
 //         if (number % factor === 0)
 //             return false;
-            
+
 //     return true;
 // }
 
@@ -373,13 +370,12 @@
 //     return {
 //         radius,
 //         draw(){
-//             console.log('draw');        
+//             console.log('draw');
 //         }
 //     };
 // }
 
 // const myCircle = createCircle(1);
-
 
 // // const circle1 = createCircle(1);
 // // console.log(circle1);
@@ -387,8 +383,8 @@
 // // const circle2 = createCircle(2);
 // // console.log(circle2);
 
-// //Construction Function
-// //Using Pascal Notation to declare Constructor Function
+// NOTE: Construction Function
+// Using Pascal Notation to declare Constructor Function
 // function Circle(radius){
 //     this.radius = radius;
 //     this.draw = function(){
@@ -398,15 +394,100 @@
 
 // const circle = new Circle(1);
 
+// const circle = {
+//   radius: 1
+// };
 
-const circle = {
-    radius: 1
-};
+// circle.color = " yellow";
+// circle.draw = function () {};
 
-circle.color = ' yellow';
-circle.draw = function() {}
+// delete circle.color;
+// delete circle.draw;
 
-delete circle.color;
-delete circle.draw;
+// console.log(circle);
 
-console.log(circle);
+// const message = "This is my first message";
+
+// const another = new String('hi');
+
+// NOTE: Template Literals  ``
+
+// const name = 'Liew';
+// const another = `Hi ${name} ${2+3},
+
+// Thank you for joining my mailing list.
+
+// Regards,
+// SumWin+`;
+
+//NOTE: Date
+
+// const now = new Date();
+// const date1 = new Date('May 11 2018 09:00');
+// const date2 = new Date(2018, 4, 11, 9);
+
+// now.setFullYear(2017);
+
+// TODO: Exercise 1- Address Object
+
+// let address = {
+//   street: "a",
+//   citi: "b",
+//   zipCode: "c"
+// };
+
+// function showAddress(address) {
+//   for (let key in address) console.log(key, address[key]);
+// }
+
+// showAddress(address);
+
+// TODO: Factory and Constructor Functions
+
+// let address = {
+//   street: "a",
+//   citi: "b",
+//   zipCode: "c"
+// };
+
+// Factory
+// function createAddress(street, citi, zipCode) {
+//   return {
+//     street,
+//     citi,
+//     zipCode
+//   };
+// }
+
+//Constructor Function
+
+// let address = new Address("a", "b", "c");
+// console.log(address);
+
+// function Address(street, citi, zipCode) {
+//   this.street = street;
+//   this.citi = citi;
+//   this.zipCode = zipCode;
+// }
+
+//TODO: Exercise 3- Object Equality
+
+// let address1 = new Address("a", "b", "c");
+// let address2 = new Address("a", "b", "c");
+
+// function Address(street, citi, zipCode) {
+//   this.street = street;
+//   this.citi = citi;
+//   this.zipCode = zipCode;
+// }
+
+// function areEqual(address1, address2) {
+//   return (
+//     address1.street === address2.street &&
+//     address1.citi === address2.citi &&
+//     address1.zipCode === address2.zipCode
+//   );
+// }
+
+// function areSame(address1, address2) {}
+//TODO: Exercise 4- Blog Post Object
