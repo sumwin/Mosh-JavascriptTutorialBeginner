@@ -529,8 +529,283 @@
 // console.log(course);
 
 // NOTE: Removing Elements
-const numbers =[1,2,3,4,5];
+// const numbers = [1, 2, 3, 4, 5];
 
-const last = numbers.pop();
+// // remove at End
+// const last = numbers.pop();
 
-const first = numbers.shift;
+// //Remove at Beginning
+// const first = numbers.shift;
+
+// //Remove at Middle
+// numbers.splice(2, 2);
+// console.log(numbers);
+
+//NOTE: Emptying an Array
+// let numbers = [1, 2, 3, 4, 5];
+// let another = numbers;
+// // numbers = [];
+
+//Solution 2:
+// numbers.length = 0;
+
+//Solution 3:
+// numbers.splice(0, numbers.length);
+
+//solution 4:
+// while (numbers.length > 0) {
+//     numbers.pop();
+// }
+// console.log(numbers);
+
+// console.log(another);
+
+// NOTE: Combining and Slicing Arrays
+
+// const first = [{
+//     id: 1
+// }];
+// const second = [4, 5, 6];
+
+// const combine = first.concat(second);
+// first[0].id = 10;
+
+// const slice = combine.slice();
+
+// console.log(combine);
+// console.log(slice);
+
+// NOTE: The Spread Operator
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+
+// // const combine = first.concat(second);
+// const combine = [...first, 'a', ...second, 'b'];
+
+// // const copy = combine.slice();
+// const copy = [...combine]
+// console.log(copy);
+
+//NOTE: Iterating an Array
+
+// const numbers = [1, 2, 3]
+
+// for (let number of numbers)
+//     console.log(number);
+
+// numbers.forEach((number, index) => console.log(index, number));
+
+//NOTE:Joining Arrays
+
+// const numbers = [1, 2, 3];
+// const joined = numbers.join(',');
+// console.log(joined);
+
+// const message = 'This is my first message';
+// const parts = message.split(' ');
+// console.log(parts);
+
+// const combined = parts.join('-');
+// console.log(combined);
+
+// NOTE: SOrting Arrays
+
+// const numbers = [2, 3, 1];
+// numbers.sort();
+// console.log(numbers);
+
+// numbers.reverse();
+// console.log(numbers);
+
+// const courses = [{
+//         id: 1,
+//         name: 'Node.js'
+//     },
+//     {
+//         id: 2,
+//         name: 'javaScript'
+//     },
+// ];
+
+// courses.sort(function (a, b) {
+//     //a < b => -1
+//     //a > b => 1
+//     //a ===b => 0
+//     const nameA = a.name.toLowerCase();
+//     const nameB = a.name.toLowerCase();
+//     if (nameA < nameB) return -1;
+//     if (nameA > nameB) return 1;
+//     return 0;
+// });
+
+// console.log(courses);
+
+// NOTE:  Testing the Elements of an Array
+
+// const numbers = [1, -1, 2, 3];
+
+// //every()
+// //some()
+
+// const atLeastOnePositive = numbers.some(function (value) {
+//     return value >= 0;
+// });
+
+// console.log(atLeastOnePositive);
+
+//NOTE: Filtering an Array
+//NOTE: Mapping an Array
+
+// const numbers = [1, -1, 2, 3];
+
+// const item = numbers.filter(n => n >= 0).map(n => ({
+//     value: n
+// })).filter(obj => obj.value > 1).map(obj => obj.value);
+
+// // const item = filtered.map(n => ({
+// //     value: n
+// // }));
+
+// // const html = '<ul>' + item.join('') + '</ul>';
+// console.log(item);
+
+//NOTE:Reducing an Array
+
+// const numbers = [1, -1, 2, 3];
+// // let sum = 0;
+// // for (let n of numbers)
+// //     sum += n;
+
+// //a = 0, c = 1
+// const sum = numbers.reduce((accumlator, currentValue) => accumlator + currentValue);
+
+// console.log(sum);
+
+//TODO: Exercise 1- Array from Range
+// const numbers = arrayFromRange(-10, -4);
+
+// console.log(numbers);
+
+// function arrayFromRange(min, max) {
+//     const output = [];
+//     for (let i = min; i <= max; i++)
+//         output.push(i);
+//     return output;
+// }
+
+// NOTE:Exercise 2- Includes
+
+// const numbers = [1, 2, 3, 4];
+
+// console.log(numbers.includes(1));
+
+// function includes(array, searchElement) {
+//     for (let element of array) {
+//         if (element === searchElement)
+//             return true;
+//         return false;
+//     }
+// }
+
+//TODO: Except
+
+// const numbers = [1, 2, 3, 4, 1, 1];
+
+// const output = except(numbers, [1]);
+
+// console.log(output);
+
+// function except(array, excluded) {
+//     const output = [];
+//     for (let element of array)
+//         if (!excluded.includes(element))
+//             output.push(element);
+//     return output
+// }
+
+//NOTE: Declarations vs Expressions
+// NOTE: Hoisting
+// let run = function () {
+//     console.log('run');
+
+// };
+// let move = run;
+// run();
+// move();
+
+// let run = function () {
+//     console.log('run');
+// };
+
+// NOTE: Arguments
+// function sum() {
+//     let total = 0;
+//     for (let value of arguments)
+//         total += value;
+//     return total;
+// }
+
+// console.log(sum(1, 2, 3, 4, 5, 10, 11, 11));
+
+//NOTE: Rest Operator 
+// function sum(discount, ...prices) {
+
+//     const total = prices.reduce((a, b) => a + b);
+//     return total * (1 - discount);
+
+// }
+
+// console.log(sum(0.1, 20, 30));
+
+// // NOTE: Default Parameters
+
+// function interest(principal, rate = 3.5, years) {
+//     return principal * rate / 100 * years;
+// }
+
+// console.log(interest(10000, undefined, 12));
+
+// NOTE: Getters and Setters
+
+// const person = {
+//     firstName: 'sumwin',
+//     lastName: 'Liew',
+//     get fullName() {
+//         return `${person.firstName} ${person.lastName}`;
+//     },
+//     set fullName(value) {
+//         const parts = value.split(' ');
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+//     }
+// };
+
+
+// person.fullName = null;
+
+// //getters => access properties
+// //setters => change ( mutate) them
+
+// console.log(person);
+
+//NOTE: Try and Catch
+const person = {
+    firstName: 'sumwin',
+    lastName: 'Liew',
+    set fullName(value) {
+        if (typeof value !== 'string') return;
+        throw new Error('Value is not a string.');
+
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+try {
+    person.fullName = null;
+} catch (e) {
+    alert(e)
+}
+
+console.log(person);
