@@ -492,7 +492,6 @@
 // function areSame(address1, address2) {}
 //TODO: Exercise 4- Blog Post Object
 
-
 //NOTE: Adding Elements
 
 // const numbers = [3,4];
@@ -524,7 +523,6 @@
 
 // // console.log(courses.includes({id:1, name:'a'}));
 // const course = courses.find(course =>course.name === 'a');
-
 
 // console.log(course);
 
@@ -747,7 +745,7 @@
 
 // console.log(sum(1, 2, 3, 4, 5, 10, 11, 11));
 
-//NOTE: Rest Operator 
+//NOTE: Rest Operator
 // function sum(discount, ...prices) {
 
 //     const total = prices.reduce((a, b) => a + b);
@@ -780,7 +778,6 @@
 //     }
 // };
 
-
 // person.fullName = null;
 
 // //getters => access properties
@@ -789,23 +786,142 @@
 // console.log(person);
 
 //NOTE: Try and Catch
-const person = {
-    firstName: 'sumwin',
-    lastName: 'Liew',
-    set fullName(value) {
-        if (typeof value !== 'string') return;
-        throw new Error('Value is not a string.');
+// const person = {
+//   firstName: "sumwin",
+//   lastName: "Liew",
+//   set fullName(value) {
+//     if (typeof value !== "string") throw new Error("Value is not a string.");
 
-        const parts = value.split(' ');
-        this.firstName = parts[0];
-        this.lastName = parts[1];
-    }
-};
+//     const parts = value.split(" ");
+//     if (parts.length !== 2) {
+//       throw new Error("Enter a first and last name");
+//     }
+//     this.firstName = parts[0];
+//     this.lastName = parts[1];
+//   }
+// };
 
-try {
-    person.fullName = null;
-} catch (e) {
-    alert(e)
-}
+// try {
+//   person.fullName = "";
+// } catch (e) {
+//   alert(e);
+// }
 
-console.log(person);
+// console.log(person);
+
+// NOTE: Loval VS Global Scope
+
+// const color = "red";
+
+// function start() {
+//   const message = "hi";
+//   const color = "blue";
+//   console.log(color);
+
+//   //#region Test
+//   //   if (true) {
+//   //     const another = "bye";
+//   //   }
+//   //   for (let i = 0; i < 5; i++) {
+//   //     console.log(i);
+//   //   }
+//   //#endregion
+// }
+
+// function stop() {
+//   const message = "bye";
+// }
+// start();
+
+//NOTE: Let vs Var
+
+// function start() {
+//   for (var i = 0; i < 5; i++) console.log(i);
+
+//   console.log(i);
+// }
+
+// start();
+
+// var color = "red";
+// let age = 30;
+
+// function sayHi() {
+//   console.log("hi");
+// }
+
+//NOTE: The this Keyboard
+//method => obj
+//function => global ( window, global)
+
+// const video = {
+//   title: "a",
+//   tags: ["a", "b", "c"],
+//   showTags() {
+//     this.tags.forEach(function(tag) {
+//       console.log(this.title, tag);
+//     }, this);
+//   }
+// };
+// video.showTags();
+
+// NOTE: Changing this
+// const video = {
+//   title: "a",
+//   tags: ["a", "b", "c"],
+//   showTags() {
+//     const self = this;
+//     this.tags.forEach(tag => {
+//       console.log(this.title, tag);
+//     });
+//   }
+// };
+// video.showTags();
+
+// function playVideo() {
+//   console.log(this);
+// }
+// playVideo.call({ name: "win" }, 1, 2);
+// playVideo.apply({ name: "Liew" }, [1, 2]);
+
+// playVideo();
+
+// TODO:Exercise 1- Sum of Arguments
+// console.log(sum([1, 2, 3, 4]));
+
+// function sum(...items) {
+//   if (items.length === 1 && Array.isArray(items[0])) {
+//     items = [...items[0]];
+//   }
+//   return items.reduce((a, b) => a + b);
+// }
+
+// TODO: Exercise 2- Area of Circle
+// const cicrle = {
+//   radius: 1,
+//   get area() {
+//     return Math.PI * this.radius * this.radius;
+//   }
+// };
+
+// console.log(circle.area);
+
+// TODO: Exercise 3- Error Handling\
+
+// try {
+//   const numbers = [1, 2, 3, 4];
+//   const count = countOccurences(null, 1);
+//   console.log(count);
+// } catch (e) {
+//   console.log(e.message);
+// }
+
+// function countOccurences(array, searchElement) {
+//   if (!Array.isArray(array)) {
+//     throw new Error("Invalid array.");
+//   }
+//   return array.reduce((accumulator, current) => {
+//     const occurrences = current === searchElement ? 1 : 0;
+//     return accumulator + occurrences;
+//   }, 0);
+// }
